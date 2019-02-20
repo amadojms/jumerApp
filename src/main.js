@@ -6,7 +6,7 @@ import './registerServiceWorker'
 import 'element-ui/lib/theme-chalk/index.css'
 import ElementUI from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/en'
-// import './styles.scss'
+// import './styles.styl'
 
 Vue.use(ElementUI, { locale })
 Vue.config.productionTip = false
