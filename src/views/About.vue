@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div class="about">
-    <h1>Pantalla nueva nueva nueva 2</h1>
-  </div>
-=======
   <el-container>
     <el-header style="text-align: right; font-size: 12px">
       <el-dropdown>
@@ -28,7 +23,6 @@
       </el-table>
     </el-main>
   </el-container>
->>>>>>> 32be4b06923a743b220b2308b33cb85bdec79f4b
 </template>
 <script>
   export default {
