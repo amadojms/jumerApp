@@ -1,7 +1,17 @@
-let express = require('express')
-let app = express();
-var port = process.env.PORT || 8080;
-app.get('/', (req, res) => res.send('Hello World with Express'));
-app.listen(port, function () {
-     console.log("Running RestHub on port " + port);
-});
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+const routes = require('./routes')
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => res.send('App is working'))
+
+app.use('/api', routes)
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
+
+module.exports = {
+     app
+}
