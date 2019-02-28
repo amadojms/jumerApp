@@ -1,17 +1,28 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-const routes = require('./routes')
+let express = require('express');
+let bodyParser = require('body-parser');
+let mongoose = require('mongoose');
+let app = express();
+let apiRoutes = require("./routes/api")
 
+
+// Configure bodyparser para manejar peticiones post
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => res.send('App is working'))
+// Conectar a mongodb
+mongoose.connect('mongodb://localhost/resthub');
 
-app.use('/api', routes)
+var db = mongoose.connection;
+// puerto server
+var port = process.env.PORT || 8080;
+app.get('/', (req, res) => res.send('Hello World with Express'));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+// Usar /api para rutas
+app.use('/api', apiRoutes)
 
-module.exports = {
-     app
-}
+// Launch app to listen to specified port
+app.listen(port, function () {
+    console.log("Running RestHub on port " + port);
+});
