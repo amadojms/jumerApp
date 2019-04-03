@@ -1,5 +1,5 @@
 const pkg = require('./package')
-
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   mode: 'universal',
@@ -15,7 +15,12 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      }
     ]
   },
 
@@ -28,14 +33,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    // 'element-ui/lib/theme-chalk/index.css'
+    '~/assets/style/app.styl'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    // '@/plugins/element-ui'
+    '@/plugins/vuetify'
   ],
 
   /*
@@ -57,8 +62,13 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    transpile: [/^element-ui/],
-    
+    transpile: ['vuetify/lib'],
+    plugins: [new VuetifyLoaderPlugin()],
+    loaders: {
+      stylus: {
+        import: ['~assets/style/variables.styl']
+      }
+    },
     /*
     ** You can extend webpack config here
     */
