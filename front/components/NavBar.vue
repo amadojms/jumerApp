@@ -1,19 +1,42 @@
 <template>
-<div class="nav">
-    
-      <!-- <nuxt-link to="profile">profile</nuxt-link>
-      <nuxt-link to="admin">admin</nuxt-link> -->
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-      
-    <el-tab-pane v-for="(item,index) in menu" :key="index" :label="item.title" :to="item.to" >
-        {{item.title}}
-    </el-tab-pane>
-    <!-- admin1</nuxt-link> -->
-    <!-- <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-    <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-    <el-tab-pane label="Task" name="fourth">Task</el-tab-pane> -->
-  </el-tabs>
-</div>
+  <v-card height="200px" flat>
+    <div class="headline text-xs-center pa-5">
+      Active: {{ bottomNav }}
+    </div>
+    <v-bottom-nav
+      :active.sync="bottomNav"
+      :value="true"
+      absolute
+      color="transparent"
+    >
+      <v-btn
+        color="teal"
+        flat
+        value="recent"
+      >
+        <span>Recent</span>
+        <v-icon>history</v-icon>
+      </v-btn>
+
+      <v-btn
+        color="teal"
+        flat
+        value="favorites"
+      >
+        <span>Favorites</span>
+        <v-icon>favorite</v-icon>
+      </v-btn>
+
+      <v-btn
+        color="teal"
+        flat
+        value="nearby"
+      >
+        <span>Nearby</span>
+        <v-icon>place</v-icon>
+      </v-btn>
+    </v-bottom-nav>
+  </v-card>
 </template>
 <script>
   export default {

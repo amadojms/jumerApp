@@ -2,7 +2,7 @@
   <section class="">
     <nav-bar />
         <!-- <nuxt /> -->
-    <!-- <div>
+    <div>
       <nav-bar />
       <h1 class="title">
         Eventos
@@ -10,7 +10,7 @@
       <h2 class="subtitle">
         Church events admin
       </h2>
-    </div> -->
+    </div>
   </section>
 </template>
 

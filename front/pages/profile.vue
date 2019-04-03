@@ -1,17 +1,5 @@
 <template>
-  <section class="">
-    <nav-bar />
-        <!-- <nuxt /> -->
-    <!-- <div>
-      <nav-bar />
-      <h1 class="title">
-        Eventos
-      </h1>
-      <h2 class="subtitle">
-        Church events admin
-      </h2>
-    </div> -->
-  </section>
+
 </template>
 
 <script>
