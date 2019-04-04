@@ -1,6 +1,6 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
+  <v-app>
+    <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
@@ -56,13 +56,13 @@
       >
         <v-icon>menu</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-toolbar> -->
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
       temporary
@@ -76,13 +76,51 @@
           <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer>
-    <v-footer
+    </v-navigation-drawer> -->
+    <!-- <v-footer
       :fixed="fixed"
       app
     >
       <span>&copy; 2019</span>
-    </v-footer>
+    </v-footer> -->
+  <v-card height="200px" flat>
+    <div class="headline text-xs-center pa-5">
+      Active: {{ bottomNav }}
+    </div>
+    <v-bottom-nav
+      :active.sync="bottomNav"
+      :value="true"
+      absolute
+      color="transparent"
+    >
+      <v-btn
+        color="teal"
+        flat
+        value="recent"
+      >
+        <span>Recent</span>
+        <v-icon>history</v-icon>
+      </v-btn>
+
+      <v-btn
+        color="teal"
+        flat
+        value="favorites"
+      >
+        <span>Favorites</span>
+        <v-icon>favorite</v-icon>
+      </v-btn>
+
+      <v-btn
+        color="teal"
+        flat
+        value="nearby"
+      >
+        <span>Nearby</span>
+        <v-icon>place</v-icon>
+      </v-btn>
+    </v-bottom-nav>
+  </v-card>
   </v-app>
 </template>
 
@@ -90,9 +128,9 @@
 export default {
   data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
+      // clipped: false,
+      // drawer: false,
+      // fixed: false,
       items: [
         {
           icon: 'apps',
@@ -105,9 +143,10 @@ export default {
           to: '/inspire'
         }
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
+      bottomNav: 'recent',
+      // miniVariant: false,
+      // right: true,
+      // rightDrawer: false,
       title: 'Vuetify.js'
     }
   }
