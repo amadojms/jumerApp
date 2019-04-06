@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app fluid>
     <!-- <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -58,7 +58,7 @@
       </v-btn>
     </v-toolbar> -->
     <v-content>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
@@ -83,10 +83,12 @@
     >
       <span>&copy; 2019</span>
     </v-footer> -->
-  <v-card height="200px" flat>
-    <div class="headline text-xs-center pa-5">
+    <!-- <div class="headline text-xs-center pa-5">
       Active: {{ bottomNav }}
-    </div>
+    </div> -->
+  <v-card  flat>
+
+
     <v-bottom-nav
       :active.sync="bottomNav"
       :value="true"
