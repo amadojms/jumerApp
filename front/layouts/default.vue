@@ -87,8 +87,6 @@
       Active: {{ bottomNav }}
     </div> -->
   <v-card  flat>
-
-    <keep class="alive"></keep>
     <v-bottom-nav
       :active.sync="bottomNav"
       :value="true"
