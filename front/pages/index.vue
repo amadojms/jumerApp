@@ -5,7 +5,7 @@
     align-center
     wrap
   >
-  <input type="text" name="" id="" value="amado">
+  <!-- <input type="text" name="" id="" value="amado"> -->
     <v-flex >
       <!-- <v-card> -->
         <v-list three-line>
@@ -57,21 +57,26 @@ export default {
           { header: 'Today' },
           {
             avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg',
-            title: 'Brunch this weekend?',
-            subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
+            title: 'Pascua juvenil',
+            date: "09/04/2019",
+            subtitle: "Invitar a todos los jovenes &mdash; <span class='grey--text text--lighten-1'>Jumer</span> "
           },
-          { divider: true, inset: true },
+          { divider: true, inset: false },
           {
             avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg',
-            title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-            subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend."
+            title: 'Limpieza',
+            date: "09/04/2019",
+            subtitle: "Adultos mayores a 25 años &mdash;<span class='grey--text text--lighten-1'>Anspac</span> "
           },
-          { divider: true, inset: true },
+          { divider: true, inset: false },
           {
             avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg',
-            title: 'Oui oui',
-            subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?"
-          }
+            title: 'Hora santa de adultos',
+            date: "09/04/2019",
+            subtitle: "Hora santa &mdash;<span class='grey--text text--lighten-1'>Convivencistas</span> "
+          },
+          { header: 'Ayer' },
+
         ]
     }
   }
