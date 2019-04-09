@@ -5,9 +5,10 @@
     align-center
     wrap
   >
+  <input type="text" name="" id="" value="amado">
     <v-flex >
       <!-- <v-card> -->
-        <v-list two-line>
+        <v-list three-line>
           <template v-for="(item, index) in items">
             <v-subheader
               v-if="item.header"

@@ -88,17 +88,19 @@
     </div> -->
   <v-card  flat>
 
-
+    <keep class="alive"></keep>
     <v-bottom-nav
       :active.sync="bottomNav"
       :value="true"
       absolute
       color="transparent"
+      
     >
       <v-btn
         color="teal"
         flat
         value="recent"
+        to="/inspire"
       >
         <span>Recent</span>
         <v-icon>history</v-icon>
@@ -108,6 +110,7 @@
         color="teal"
         flat
         value="favorites"
+        to="/"
       >
         <span>Favorites</span>
         <v-icon>favorite</v-icon>
